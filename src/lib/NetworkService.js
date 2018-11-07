@@ -1,5 +1,6 @@
 const NetworkService = {
-  checkExpress: checkExpress
+  checkExpress: checkExpress,
+  getTodayCount: getTodayCount
 }
 const baseUrl = '/baseUrl'
 // 接口方法封装
@@ -33,6 +34,13 @@ function checkExpress (logisticCode, shipperCode) {
   let body = new FormData()
   body.append('logisticCode', logisticCode)
   body.append('shipperCode', shipperCode)
+  return loadingData(baseUrl, url, sendType, body)
+}
+
+function getTodayCount () {
+  let url = '/api/count'
+  let sendType = 'GET'
+  let body = null
   return loadingData(baseUrl, url, sendType, body)
 }
 export default NetworkService

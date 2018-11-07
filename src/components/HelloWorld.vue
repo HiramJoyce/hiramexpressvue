@@ -9,7 +9,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: '欢迎使用简单查快递查询工具'
+      msg: '快递简单查'
     }
   }
 }
